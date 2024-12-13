@@ -1,0 +1,116 @@
+<!-- certifications.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+        header {
+            font-family: Garamond, sans-serif;
+            background: #91918a;
+            color: white;
+            padding: 0.5px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #AAAAAA;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: #A9A9A9;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #A9A9A9;
+        }
+        nav a.active {
+            background: #A9A9A9;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #FFFFFF;
+            margin-top: 10px;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 150px;
+        }
+
+        section {
+            padding: 20px;
+            margin: auto;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VARSHA SREE SOMAYAJI</h1>
+        <h3>CERTIFICATIONS</h3>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="profile.html">Personal Profile</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html" class="active">Certifications</a>
+    </nav>
+    <section>
+        <h2>Certifications</h2>
+        <p>Here are the certifications I've earned:</p>
+        <ul>
+            <li><b>Certification 1:</b> Certified Java Developer  <a href="#" class="certificate-link" onclick="showCertificate('cert1')">Certificate 1</a></li>
+            <li><b>Certification 2:</b> Data Science and Machine Learning Specialist  <a href="#" class="certificate-link" onclick="showCertificate('cert2')">Certificate 2</a></li>
+            <li><b>Certification 3:</b> Web Development Bootcamp Graduate  <a href="#" class="certificate-link" onclick="showCertificate('cert3')">Certificate 3</a></li>
+        </ul>
+    </section>
+
+    
+    <!-- Certificate images -->
+    <div id="cert1" class="certificate-img">
+        <img src="certificate1.jpg" alt="Certificate 1">
+    </div>
+    <div id="cert2" class="certificate-img">
+        <img src="certificate2.jpg" alt="Certificate 2">
+    </div>
+    <div id="cert3" class="certificate-img">
+        <img src="certificate3.jpg" alt="Certificate 3">
+    </div>
+    
+    <script>
+        // Function to display the corresponding certificate image
+        function showCertificate(certId) {
+            // Hide all certificate images
+            const certificates = document.querySelectorAll('.certificate-img');
+            certificates.forEach(cert => {
+                cert.style.display = 'none';
+            });
+            
+            // Show the selected certificate
+            const selectedCert = document.getElementById(certId);
+            selectedCert.style.display = 'block';
+        }
+    </script>
+<footer>
+        <p>© 2024 S.Varsha Sree. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
